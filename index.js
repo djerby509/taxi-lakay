@@ -55,7 +55,7 @@ async function readToken(req, env) {
 async function passwordHash(password, saltBytes = crypto.getRandomValues(new Uint8Array(16))) {
   const key = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveBits']);
   const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt: saltBytes, iterations: 100000, hash: 'SHA-256' }, key, 256);
-  return `pbkdf2$210000$${b64u(saltBytes)}$${b64u(new Uint8Array(bits))}`;
+  return `pbkdf2$100000$${b64u(saltBytes)}$${b64u(new Uint8Array(bits))}`;
 }
 async function verifyPassword(password, stored, oldSalt) {
   if (String(stored).startsWith('pbkdf2$')) {
