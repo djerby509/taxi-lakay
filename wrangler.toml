@@ -1,0 +1,8 @@
+name = "taxilakay-api"
+main = "src/index.js"
+compatibility_date = "2026-11-17"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "taxi-lakay-db"
+database_id = "8407b150-b0cc-4cb2-8fbc-6092b2f86811"
