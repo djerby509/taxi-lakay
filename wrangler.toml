@@ -1,5 +1,5 @@
 name = "taxilakay-api"
-main = "src/index.js"
+main = "index.js"
 compatibility_date = "2026-11-17"
 
 [[d1_databases]]
